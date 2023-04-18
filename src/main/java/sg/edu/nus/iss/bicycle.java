@@ -33,6 +33,7 @@ public class bicycle {
         speed += value;
     }
 
+    //What is the use of this?
     @Override
     public int hashCode() {
         final int prime = 31;

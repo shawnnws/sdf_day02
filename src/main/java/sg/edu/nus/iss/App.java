@@ -8,18 +8,25 @@ public class App
     public static void main( String[] args )
     {
         MountainBike mb1 = new MountainBike(5, 10, 20);
-        System.out.println(mb1.toString());
-
         MountainBike mb2 = new MountainBike(1, 2, 3);
         MountainBike mb3 = new MountainBike(4, 5, 6);
 
-        List<MountainBike> bicycles = new ArrayList<MountainBike>();
+        RoadBike rb1 = new RoadBike(11, 22, 33);
+
+        List<bicycle> bicycles = new ArrayList<bicycle>();
         bicycles.add(mb1);
         bicycles.add(mb2);
         bicycles.add(mb3);
+        bicycles.add(rb1);
 
-        for (int i = 0; i < bicycles.size(); i++) {
-            System.out.println("Bike " + (i + 1) + ":" + bicycles.get(i).toString());
+        for (bicycle bicycle : bicycles) {
+            if (bicycle instanceof MountainBike) {
+                System.out.println("Mountain bike: " + bicycle.toString());
+            }
+            else {
+                System.out.println("Road bike: " + bicycle.toString());
+            }
         }
+        System.out.println(bicycles);
     }
 }
