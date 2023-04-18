@@ -26,7 +26,7 @@ public class MountainBike extends bicycle {
     @Override
     public String toString() {
         // return "MountainBike [seatHeight=" + seatHeight + "]";
-        return super.toString() + "/nSeat Height: " + seatHeight;
+        return super.toString() + "\nSeat Height: " + seatHeight;
     }
 
     
